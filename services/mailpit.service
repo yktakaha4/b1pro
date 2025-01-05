@@ -1,0 +1,12 @@
+[Unit]
+Description=Mailpit server
+
+[Service]
+ExecStart=/home/tkhs/b1pro/mailpit/mailpit.sh
+Restart=on-failure
+SyslogIdentifier=mailpit
+User=tkhs
+Group=tkhs
+
+[Install]
+WantedBy=multi-user.target

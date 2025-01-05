@@ -1,0 +1,11 @@
+[Unit]
+After=network.target
+
+[Service]
+User=tkhs
+Group=tkhs
+ExecStart=/home/tkhs/b1pro/oauth2-proxy/oauth2-proxy.sh
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

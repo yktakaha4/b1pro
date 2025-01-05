@@ -1,0 +1,11 @@
+[Unit]
+After=network.target
+
+[Service]
+User=tkhs
+Group=tkhs
+ExecStart=/home/tkhs/b1pro/app/app.sh
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
