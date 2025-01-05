@@ -10,7 +10,7 @@ $OAUTH2_PROXY_PATH \
     --email-domain="*" \
     --provider="github" \
     --github-user="$GITHUB_USERS" \
-    --redirect-url="$REDIRECT_URL" \
+    --redirect-url="https://b1pro/oauth2/callback" \
     --client-id="$CLIENT_ID" \
     --client-secret="$CLIENT_SECRET" \
     --cookie-secret="$COOKIE_SECRET" \
