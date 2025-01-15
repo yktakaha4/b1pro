@@ -127,15 +127,6 @@ alias ja='trans -b en:ja'
 alias less='less -R'
 alias r='rails'
 
-# uim-fep with tmux
-if [ ! $UIM_FEP_PID ] && [ ! "$TMUX" ]; then
-  if $(tmux has-session 2>&1 /dev/null) ; then
-    uim-fep -s none -e tmux attach
-  else
-    uim-fep -s none -e tmux
-  fi
-fi
-
 # code
 socket=$(ls -1t /run/user/$UID/vscode-ipc-*.sock 2> /dev/null | head -1)
 export VSCODE_IPC_HOOK_CLI=${socket}
