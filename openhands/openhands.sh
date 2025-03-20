@@ -21,7 +21,7 @@ docker run -it --rm --pull=always \
     -v "$workspace_dir:/opt/workspace_base" \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v "$state_dir:/.openhands-state" \
-    -p "127.0.0.1:39000:3000" \
+    -p "39000:3000" \
     --add-host host.docker.internal:host-gateway \
     --name openhands-app \
     docker.all-hands.dev/all-hands-ai/openhands:0.29
