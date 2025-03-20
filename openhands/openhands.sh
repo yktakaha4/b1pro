@@ -13,7 +13,7 @@ runtime_container_image="docker.all-hands.dev/all-hands-ai/runtime:0.29-nikolaik
 
 docker pull "$runtime_container_image"
 
-docker run -it --rm --pull=always \
+docker run -i --rm --pull=always \
     -e "SANDBOX_RUNTIME_CONTAINER_IMAGE=$runtime_container_image" \
     -e LOG_ALL_EVENTS=true \
     -e "SANDBOX_USER_ID=$OPENHANDS_SANDBOX_USER_ID" \
@@ -21,7 +21,6 @@ docker run -it --rm --pull=always \
     -v "$workspace_dir:/opt/workspace_base" \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v "$state_dir:/.openhands-state" \
-    -p "39000:3000" \
-    --add-host host.docker.internal:host-gateway \
+    -p "127.0.0.1:39000:3000" \
     --name openhands-app \
     docker.all-hands.dev/all-hands-ai/openhands:0.29
