@@ -14,10 +14,6 @@ RUN echo "code code/add-microsoft-repo boolean true" | debconf-set-selections \
   && echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" | tee /etc/apt/sources.list.d/vscode.list > /dev/null \
   && rm -f packages.microsoft.gpg
 
-# google-chrome
-RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/googlechrom-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google-chrome.list \
-  && curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/googlechrom-keyring.gpg
-
 # gh
 RUN mkdir -p -m 755 /etc/apt/keyrings \
   && out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
@@ -27,8 +23,8 @@ RUN mkdir -p -m 755 /etc/apt/keyrings \
 
 RUN apt-get update \
   && apt-get install -y \
+  language-pack-en \
   code \
-  google-chrome-stable \
   gh \
   direnv \
   git \
@@ -36,6 +32,11 @@ RUN apt-get update \
   zsh \
   tmux \
   jq
+
+RUN locale-gen en_US.UTF-8 \
+  && update-locale LANG=en_US.UTF-8 \
+  && echo "LANG=en_US.UTF-8" > /etc/default/locale \
+  && echo "LC_ALL=en_US.UTF-8" >> /etc/default/locale
 
 USER ubuntu
 
