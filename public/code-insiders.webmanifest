@@ -1,0 +1,34 @@
+{
+  "name": "Visual Studio Code Insiders - b1pro",
+  "short_name": "Insiders",
+  "start_url": "/code-insiders/",
+  "lang": "en-US",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "icons": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Visual_Studio_Code_Insiders_1.36_icon.svg/1024px-Visual_Studio_Code_Insiders_1.36_icon.svg.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Visual_Studio_Code_Insiders_1.36_icon.svg/1024px-Visual_Studio_Code_Insiders_1.36_icon.svg.png",
+      "type": "image/png",
+      "sizes": "256x256",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Visual_Studio_Code_Insiders_1.36_icon.svg/1024px-Visual_Studio_Code_Insiders_1.36_icon.svg.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Visual_Studio_Code_Insiders_1.36_icon.svg/1024px-Visual_Studio_Code_Insiders_1.36_icon.svg.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}
