@@ -1,0 +1,27 @@
+services:
+  sandbox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sandbox
+    restart: unless-stopped
+    env_file:
+      - sandbox.env
+    command:
+      - code
+      - serve-web
+      - --host
+      - "0.0.0.0"
+      - --port
+      - "8000"
+      - --server-base-path
+      - "/sandbox/"
+      - --server-data-dir
+      - "/opt/code-server/data"
+      - --without-connection-token
+      - --accept-server-license-terms
+    ports:
+      - "127.0.0.1:38100:8000"
+    volumes:
+      - /home/tkhs/dev/sandbox/code-server-data:/opt/code-server/data
+      - /home/tkhs/dev/sandbox/workspace:/home/ubuntu

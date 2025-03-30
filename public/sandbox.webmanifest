@@ -1,7 +1,7 @@
 {
-  "name": "Visual Studio Code - b1pro",
-  "short_name": "VSCode",
-  "start_url": "/code/",
+  "name": "Sandbox - b1pro",
+  "short_name": "Sandbox",
+  "start_url": "/sandbox/",
   "lang": "en-US",
   "display": "standalone",
   "display_override": [
@@ -9,23 +9,23 @@
   ],
   "icons": [
     {
-      "src": "https://vscode.dev/static/stable/code-192.png",
+      "src": "https://cdn-icons-png.flaticon.com/512/8297/8297386.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://vscode.dev/static/stable/code-192-maskable.png",
+      "src": "https://cdn-icons-png.flaticon.com/512/8297/8297386.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "maskable"
     },
     {
-      "src": "https://vscode.dev/static/stable/code-512.png",
+      "src": "https://cdn-icons-png.flaticon.com/512/8297/8297386.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "https://vscode.dev/static/stable/code-512-maskable.png",
+      "src": "https://cdn-icons-png.flaticon.com/512/8297/8297386.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
