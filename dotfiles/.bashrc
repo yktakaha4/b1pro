@@ -160,3 +160,5 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # rust
 . "$HOME/.cargo/env"
+
+. "$HOME/.local/bin/env"
