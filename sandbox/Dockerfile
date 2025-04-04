@@ -41,6 +41,3 @@ RUN locale-gen en_US.UTF-8 \
 USER ubuntu
 
 WORKDIR /home/ubuntu
-
-# uv
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh
